@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * Added dartdoc comments for better documentation.
+
+## 0.0.4
+
+* Updated README
