@@ -1,9 +1,36 @@
+/// A lightweight utility for displaying a modal loader overlay with
+/// customizable status text.
+///
+/// This library exposes a single convenience function: [showLoaderOverlay].
+///
+/// The overlay blocks user interaction until you remove the returned
+/// [OverlayEntry]. Typical usage:
+///
+/// ```dart
+/// final entry = showLoaderOverlay(context, message: 'Saving data');
+/// try {
+///   await performSave();
+/// } finally {
+///   if (entry.mounted) entry.remove();
+/// }
+/// ```
+///
+/// The overlay fades and scales in for a subtle appearance.
 library;
-
-export 'simple_mobile_overlay_loader.dart';
 
 import 'package:flutter/material.dart';
 
+/// Inserts and returns an [OverlayEntry] that shows a blocking loader dialog
+/// with a circular progress indicator and optional [message].
+///
+/// The overlay is inserted into the root [Overlay] so it will appear above
+/// all other widgets. You are responsible for removing the overlay by calling
+/// `remove()` on the returned [OverlayEntry] when loading completes.
+///
+/// Parameter [message] defaults to `Loading…` and is rendered beneath the
+/// spinner. Keep it short (1–2 words) for best layout.
+///
+/// Returns the created, already inserted [OverlayEntry].
 OverlayEntry showLoaderOverlay(
   BuildContext context, {
   String message = 'Loading…',

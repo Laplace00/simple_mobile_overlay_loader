@@ -15,6 +15,7 @@ A lightweight, customizable overlay loader for Flutter. Displays a modal progres
 - Custom message string (defaults to `Loading…`)
 - Blocks interaction using `ModalBarrier`
 - No external dependencies
+- Fully documented public API (see source for inline dartdoc)
 
 ---
 
@@ -24,7 +25,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  simple_mobile_overlay_loader: ^0.0.1
+  simple_mobile_overlay_loader: ^0.0.2
 ```
 
 Then run:
@@ -101,45 +102,7 @@ Returns: The created `OverlayEntry`.
 
 Remove: Call `overlayEntry.remove()` (check `mounted` first if asynchronous work may complete after removal elsewhere).
 
-[//]: # (---)
-
-[//]: # ()
-[//]: # (## Customization)
-
-[//]: # ()
-[//]: # (Need different colors, layout, or animation?)
-
-[//]: # ()
-[//]: # (1. Copy the implementation of `_AnimatedLoader` from the source file.)
-
-[//]: # (2. Adjust styling &#40;e.g., replace `CircularProgressIndicator`, change `Card` shape, durations, barrier color&#41;.)
-
-[//]: # (3. Optionally create your own helper similar to `showLoaderOverlay`.)
-
-[//]: # ()
-[//]: # (For simple message changes just pass the `message` argument.)
-
-[//]: # ()
-[//]: # (---)
-
-[//]: # ()
-[//]: # (## Troubleshooting)
-
-[//]: # ()
-[//]: # (| Issue                                    | Cause                                                        | Fix                                                                                     |)
-
-[//]: # (|------------------------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|)
-
-[//]: # (| Overlay not visible                      | No `Overlay` above context                                  | Use a context from a widget below `MaterialApp` / `Navigator`                         |)
-
-[//]: # (| Cannot dismiss                           | Forgot to store the returned `OverlayEntry`                 | Assign to variable and call `remove&#40;&#41;`                                                |)
-
-[//]: # (| Multiple loaders stack                   | Calling show repeatedly                                      | Track if a loader is already active before showing                                    |)
-
-[//]: # (| Exception: Overlay.of&#40;&#41; returned null   | Using a context during initState                            | Call from event handlers / post-frame callback                                        |)
-
-[//]: # ()
-[//]: # (---)
+---
 
 ## Changelog
 
