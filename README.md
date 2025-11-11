@@ -99,30 +99,45 @@ Returns: The created `OverlayEntry`.
 
 Remove: Call `overlayEntry.remove()` (check `mounted` first if asynchronous work may complete after removal elsewhere).
 
----
+[//]: # (---)
 
-## Customization
+[//]: # ()
+[//]: # (## Customization)
 
-Need different colors, layout, or animation?
+[//]: # ()
+[//]: # (Need different colors, layout, or animation?)
 
-1. Copy the implementation of `_AnimatedLoader` from the source file.
-2. Adjust styling (e.g., replace `CircularProgressIndicator`, change `Card` shape, durations, barrier color).
-3. Optionally create your own helper similar to `showLoaderOverlay`.
+[//]: # ()
+[//]: # (1. Copy the implementation of `_AnimatedLoader` from the source file.)
 
-For simple message changes just pass the `message` argument.
+[//]: # (2. Adjust styling &#40;e.g., replace `CircularProgressIndicator`, change `Card` shape, durations, barrier color&#41;.)
 
----
+[//]: # (3. Optionally create your own helper similar to `showLoaderOverlay`.)
 
-## Troubleshooting
+[//]: # ()
+[//]: # (For simple message changes just pass the `message` argument.)
 
-| Issue                                    | Cause                                                        | Fix                                                                                     |
-|------------------------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| Overlay not visible                      | No `Overlay` above context                                  | Use a context from a widget below `MaterialApp` / `Navigator`                         |
-| Cannot dismiss                           | Forgot to store the returned `OverlayEntry`                 | Assign to variable and call `remove()`                                                |
-| Multiple loaders stack                   | Calling show repeatedly                                      | Track if a loader is already active before showing                                    |
-| Exception: Overlay.of() returned null   | Using a context during initState                            | Call from event handlers / post-frame callback                                        |
+[//]: # ()
+[//]: # (---)
 
----
+[//]: # ()
+[//]: # (## Troubleshooting)
+
+[//]: # ()
+[//]: # (| Issue                                    | Cause                                                        | Fix                                                                                     |)
+
+[//]: # (|------------------------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------|)
+
+[//]: # (| Overlay not visible                      | No `Overlay` above context                                  | Use a context from a widget below `MaterialApp` / `Navigator`                         |)
+
+[//]: # (| Cannot dismiss                           | Forgot to store the returned `OverlayEntry`                 | Assign to variable and call `remove&#40;&#41;`                                                |)
+
+[//]: # (| Multiple loaders stack                   | Calling show repeatedly                                      | Track if a loader is already active before showing                                    |)
+
+[//]: # (| Exception: Overlay.of&#40;&#41; returned null   | Using a context during initState                            | Call from event handlers / post-frame callback                                        |)
+
+[//]: # ()
+[//]: # (---)
 
 ## Changelog
 
