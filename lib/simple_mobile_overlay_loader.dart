@@ -1,14 +1,13 @@
-library simple_mobile_overlay_loader;
+library;
 
-export 'src/simple_mobile_overlay_loader.dart';
-
+export 'simple_mobile_overlay_loader.dart';
 
 import 'package:flutter/material.dart';
 
 OverlayEntry showLoaderOverlay(
-    BuildContext context, {
-      String message = 'Loading…',
-    }) {
+  BuildContext context, {
+  String message = 'Loading…',
+}) {
   final entry = OverlayEntry(
     builder: (overlayContext) {
       return _AnimatedLoader(message: message);

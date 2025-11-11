@@ -1,7 +1,7 @@
 name: simple_mobile_overlay_loader
 description: "A simple loader widget, with custom text for Flutter apps."
 version: 0.0.1
-homepage:
+homepage: https://github.com/Laplace00/simple_mobile_overlay_loader
 
 environment:
   sdk: ^3.9.2
@@ -15,6 +15,4 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-
-flutter:
 
