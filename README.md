@@ -87,6 +87,8 @@ class MyPage extends StatelessWidget {
 }
 ```
 
+![Example](readme_assets/overlay_example.gif)
+
 ---
 
 ## API
