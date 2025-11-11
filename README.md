@@ -157,6 +157,6 @@ Pull requests welcome. Open an issue for bugs or feature requests.
 
 ---
 
-## Acknowledgements
+## You can also buy me a coffee:
 
-Inspired by common overlay patterns in Flutter apps; packaged for quick reuse.
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/laplace00)
